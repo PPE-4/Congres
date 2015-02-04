@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BdCongresModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ACTIVITE">
+    <Key>
+      <PropertyRef Name="NUM" />
+    </Key>
+    <Property Name="NUM" Type="Int32" Nullable="false" />
+    <Property Name="LIBELLE" Type="String" MaxLength="32" FixedLength="true" Unicode="false" />
+    <Property Name="NBPLACES" Type="Int32" />
+  </EntityType>
+  <EntityType Name="CONGRESSISTE">
+    <Key>
+      <PropertyRef Name="NUM" />
+    </Key>
+    <Property Name="NUM" Type="Int32" Nullable="false" />
+    <Property Name="NUM_APPARTIENT" Type="Int32" Nullable="false" />
+    <Property Name="NUM_HEBERGE" Type="Int32" Nullable="false" />
+    <Property Name="NOM" Type="String" MaxLength="32" FixedLength="true" Unicode="false" />
+    <Property Name="PRENOM" Type="String" MaxLength="32" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="DATE">
+    <Key>
+      <PropertyRef Name="DATEHEURE" />
+    </Key>
+    <Property Name="DATEHEURE" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="DEROULER">
+    <Key>
+      <PropertyRef Name="DATEHEURE" />
+      <PropertyRef Name="NUM" />
+    </Key>
+    <Property Name="DATEHEURE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="NUM" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HOTEL">
+    <Key>
+      <PropertyRef Name="NUM" />
+    </Key>
+    <Property Name="NUM" Type="Int32" Nullable="false" />
+    <Property Name="LIBELLE" Type="String" MaxLength="32" FixedLength="true" Unicode="false" />
+    <Property Name="ADRESSE" Type="String" MaxLength="32" FixedLength="true" Unicode="false" />
+    <Property Name="VILLE" Type="String" MaxLength="32" FixedLength="true" Unicode="false" />
+    <Property Name="CP" Type="Int32" />
+    <Property Name="TEL" Type="Int32" />
+    <Property Name="ETOILES" Type="Int16" />
+    <Property Name="PRIXCHAMBRE" Type="Decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="INSCRIPTION">
+    <Key>
+      <PropertyRef Name="NUM" />
+      <PropertyRef Name="NUM_1" />
+      <PropertyRef Name="DATEHEURE" />
+    </Key>
+    <Property Name="NUM" Type="Int32" Nullable="false" />
+    <Property Name="NUM_1" Type="Int32" Nullable="false" />
+    <Property Name="DATEHEURE" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="INSCRIRE">
+    <Key>
+      <PropertyRef Name="NUM" />
+      <PropertyRef Name="NUM_1" />
+    </Key>
+    <Property Name="NUM" Type="Int32" Nullable="false" />
+    <Property Name="NUM_1" Type="Int32" Nullable="false" />
+    <Property Name="ACOMPTE" Type="Decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="INTERVENANT">
+    <Key>
+      <PropertyRef Name="NUM" />
+    </Key>
+    <Property Name="NUM" Type="Int32" Nullable="false" />
+    <Property Name="NOM" Type="String" MaxLength="32" FixedLength="true" Unicode="false" />
+    <Property Name="PRENOM" Type="String" MaxLength="32" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="LIGUE">
+    <Key>
+      <PropertyRef Name="NUM" />
+    </Key>
+    <Property Name="NUM" Type="Int32" Nullable="false" />
+    <Property Name="LIBELLE" Type="String" MaxLength="32" FixedLength="true" Unicode="false" />
+    <Property Name="ADRESSE" Type="String" MaxLength="32" FixedLength="true" Unicode="false" />
+    <Property Name="CP" Type="Int32" />
+    <Property Name="VILLE" Type="String" MaxLength="32" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SESSION">
+    <Key>
+      <PropertyRef Name="NUM" />
+    </Key>
+    <Property Name="NUM" Type="Int32" Nullable="false" />
+    <Property Name="NUM_PORTE" Type="Int32" Nullable="false" />
+    <Property Name="DATEHEURE" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="NUM_INTERVIENT" Type="Int32" Nullable="false" />
+    <Property Name="NOMINTERVENANT" Type="String" MaxLength="32" FixedLength="true" Unicode="false" />
+    <Property Name="NBPLACES" Type="Int32" />
+    <Property Name="SALLE" Type="Int16" />
+    <Property Name="PRIX" Type="Decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="THEME">
+    <Key>
+      <PropertyRef Name="NUM" />
+    </Key>
+    <Property Name="NUM" Type="Int32" Nullable="false" />
+    <Property Name="LIBELLE" Type="String" MaxLength="32" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="BdCongresEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ACTIVITES" EntityType="Self.ACTIVITE" />
+    <EntitySet Name="CONGRESSISTEs" EntityType="Self.CONGRESSISTE" />
+    <EntitySet Name="DATEs" EntityType="Self.DATE" />
+    <EntitySet Name="DEROULERs" EntityType="Self.DEROULER" />
+    <EntitySet Name="HOTELS" EntityType="Self.HOTEL" />
+    <EntitySet Name="INSCRIPTIONs" EntityType="Self.INSCRIPTION" />
+    <EntitySet Name="INSCRIREs" EntityType="Self.INSCRIRE" />
+    <EntitySet Name="INTERVENANTS" EntityType="Self.INTERVENANT" />
+    <EntitySet Name="LIGUES" EntityType="Self.LIGUE" />
+    <EntitySet Name="SESSIONS" EntityType="Self.SESSION" />
+    <EntitySet Name="THEMES" EntityType="Self.THEME" />
+  </EntityContainer>
+</Schema>

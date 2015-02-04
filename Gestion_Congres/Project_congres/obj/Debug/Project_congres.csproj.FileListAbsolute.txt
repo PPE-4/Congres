@@ -1,0 +1,9 @@
+c:\users\chloé\documents\visual studio 2013\Projects\Gestion_Grongres\Project_congres\bin\Debug\Project_congres.dll.config
+c:\users\chloé\documents\visual studio 2013\Projects\Gestion_Grongres\Project_congres\bin\Debug\Project_congres.dll
+c:\users\chloé\documents\visual studio 2013\Projects\Gestion_Grongres\Project_congres\bin\Debug\Project_congres.pdb
+c:\users\chloé\documents\visual studio 2013\Projects\Gestion_Grongres\Project_congres\bin\Debug\EntityFramework.dll
+c:\users\chloé\documents\visual studio 2013\Projects\Gestion_Grongres\Project_congres\bin\Debug\EntityFramework.xml
+c:\users\chloé\documents\visual studio 2013\Projects\Gestion_Grongres\Project_congres\bin\Debug\fr\EntityFramework.resources.dll
+c:\users\chloé\documents\visual studio 2013\Projects\Gestion_Grongres\Project_congres\obj\Debug\Project_congres.csprojResolveAssemblyReference.cache
+c:\users\chloé\documents\visual studio 2013\Projects\Gestion_Grongres\Project_congres\obj\Debug\Project_congres.dll
+c:\users\chloé\documents\visual studio 2013\Projects\Gestion_Grongres\Project_congres\obj\Debug\Project_congres.pdb

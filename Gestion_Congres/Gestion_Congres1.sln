@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project_congres", "Project_congres\Project_congres.csproj", "{76E48B3C-4041-45AE-BAC2-AE543492E19F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Win_Congres", "Win_Congres\Win_Congres.csproj", "{A85BCAC0-6C96-49C6-8EC4-F7E919729BD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Congres", "Test_Congres\Test_Congres.csproj", "{88E4C48D-7AF6-4518-AB6A-B9C25253242A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{76E48B3C-4041-45AE-BAC2-AE543492E19F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76E48B3C-4041-45AE-BAC2-AE543492E19F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76E48B3C-4041-45AE-BAC2-AE543492E19F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76E48B3C-4041-45AE-BAC2-AE543492E19F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A85BCAC0-6C96-49C6-8EC4-F7E919729BD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A85BCAC0-6C96-49C6-8EC4-F7E919729BD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A85BCAC0-6C96-49C6-8EC4-F7E919729BD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A85BCAC0-6C96-49C6-8EC4-F7E919729BD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88E4C48D-7AF6-4518-AB6A-B9C25253242A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88E4C48D-7AF6-4518-AB6A-B9C25253242A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88E4C48D-7AF6-4518-AB6A-B9C25253242A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88E4C48D-7AF6-4518-AB6A-B9C25253242A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

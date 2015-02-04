@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="BdCongresModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ACTIVITES">
+          <Key>
+            <PropertyRef Name="NUM" />
+          </Key>
+          <Property Name="NUM" Type="int" Nullable="false" />
+          <Property Name="LIBELLE" Type="char" MaxLength="32" />
+          <Property Name="NBPLACES" Type="int" />
+        </EntityType>
+        <EntityType Name="CONGRESSISTE">
+          <Key>
+            <PropertyRef Name="NUM" />
+          </Key>
+          <Property Name="NUM" Type="int" Nullable="false" />
+          <Property Name="NUM_APPARTIENT" Type="int" Nullable="false" />
+          <Property Name="NUM_HEBERGE" Type="int" Nullable="false" />
+          <Property Name="NOM" Type="char" MaxLength="32" />
+          <Property Name="PRENOM" Type="char" MaxLength="32" />
+        </EntityType>
+        <EntityType Name="DATE">
+          <Key>
+            <PropertyRef Name="DATEHEURE" />
+          </Key>
+          <Property Name="DATEHEURE" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DEROULER">
+          <Key>
+            <PropertyRef Name="DATEHEURE" />
+            <PropertyRef Name="NUM" />
+          </Key>
+          <Property Name="DATEHEURE" Type="datetime" Nullable="false" />
+          <Property Name="NUM" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HOTELS">
+          <Key>
+            <PropertyRef Name="NUM" />
+          </Key>
+          <Property Name="NUM" Type="int" Nullable="false" />
+          <Property Name="LIBELLE" Type="char" MaxLength="32" />
+          <Property Name="ADRESSE" Type="char" MaxLength="32" />
+          <Property Name="VILLE" Type="char" MaxLength="32" />
+          <Property Name="CP" Type="int" />
+          <Property Name="TEL" Type="int" />
+          <Property Name="ETOILES" Type="smallint" />
+          <Property Name="PRIXCHAMBRE" Type="decimal" Precision="10" Scale="2" />
+        </EntityType>
+        <EntityType Name="INSCRIPTION">
+          <Key>
+            <PropertyRef Name="NUM" />
+            <PropertyRef Name="NUM_1" />
+            <PropertyRef Name="DATEHEURE" />
+          </Key>
+          <Property Name="NUM" Type="int" Nullable="false" />
+          <Property Name="NUM_1" Type="int" Nullable="false" />
+          <Property Name="DATEHEURE" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="INSCRIRE">
+          <Key>
+            <PropertyRef Name="NUM" />
+            <PropertyRef Name="NUM_1" />
+          </Key>
+          <Property Name="NUM" Type="int" Nullable="false" />
+          <Property Name="NUM_1" Type="int" Nullable="false" />
+          <Property Name="ACOMPTE" Type="decimal" Precision="10" Scale="2" />
+        </EntityType>
+        <EntityType Name="INTERVENANTS">
+          <Key>
+            <PropertyRef Name="NUM" />
+          </Key>
+          <Property Name="NUM" Type="int" Nullable="false" />
+          <Property Name="NOM" Type="char" MaxLength="32" />
+          <Property Name="PRENOM" Type="char" MaxLength="32" />
+        </EntityType>
+        <EntityType Name="LIGUES">
+          <Key>
+            <PropertyRef Name="NUM" />
+          </Key>
+          <Property Name="NUM" Type="int" Nullable="false" />
+          <Property Name="LIBELLE" Type="char" MaxLength="32" />
+          <Property Name="ADRESSE" Type="char" MaxLength="32" />
+          <Property Name="CP" Type="int" />
+          <Property Name="VILLE" Type="char" MaxLength="32" />
+        </EntityType>
+        <EntityType Name="SESSIONS">
+          <Key>
+            <PropertyRef Name="NUM" />
+          </Key>
+          <Property Name="NUM" Type="int" Nullable="false" />
+          <Property Name="NUM_PORTE" Type="int" Nullable="false" />
+          <Property Name="DATEHEURE" Type="datetime" Nullable="false" />
+          <Property Name="NUM_INTERVIENT" Type="int" Nullable="false" />
+          <Property Name="NOMINTERVENANT" Type="char" MaxLength="32" />
+          <Property Name="NBPLACES" Type="int" />
+          <Property Name="SALLE" Type="smallint" />
+          <Property Name="PRIX" Type="decimal" Precision="10" Scale="2" />
+        </EntityType>
+        <EntityType Name="THEMES">
+          <Key>
+            <PropertyRef Name="NUM" />
+          </Key>
+          <Property Name="NUM" Type="int" Nullable="false" />
+          <Property Name="LIBELLE" Type="char" MaxLength="32" />
+        </EntityType>
+        <EntityContainer Name="BdCongresModelStoreContainer">
+          <EntitySet Name="ACTIVITES" EntityType="Self.ACTIVITES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CONGRESSISTE" EntityType="Self.CONGRESSISTE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DATE" EntityType="Self.DATE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DEROULER" EntityType="Self.DEROULER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HOTELS" EntityType="Self.HOTELS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="INSCRIPTION" EntityType="Self.INSCRIPTION" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="INSCRIRE" EntityType="Self.INSCRIRE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="INTERVENANTS" EntityType="Self.INTERVENANTS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LIGUES" EntityType="Self.LIGUES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SESSIONS" EntityType="Self.SESSIONS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="THEMES" EntityType="Self.THEMES" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BdCongresModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ACTIVITE">
+          <Key>
+            <PropertyRef Name="NUM" />
+          </Key>
+          <Property Name="NUM" Type="Int32" Nullable="false" />
+          <Property Name="LIBELLE" Type="String" MaxLength="32" FixedLength="true" Unicode="false" />
+          <Property Name="NBPLACES" Type="Int32" />
+        </EntityType>
+        <EntityType Name="CONGRESSISTE">
+          <Key>
+            <PropertyRef Name="NUM" />
+          </Key>
+          <Property Name="NUM" Type="Int32" Nullable="false" />
+          <Property Name="NUM_APPARTIENT" Type="Int32" Nullable="false" />
+          <Property Name="NUM_HEBERGE" Type="Int32" Nullable="false" />
+          <Property Name="NOM" Type="String" MaxLength="32" FixedLength="true" Unicode="false" />
+          <Property Name="PRENOM" Type="String" MaxLength="32" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="DATE">
+          <Key>
+            <PropertyRef Name="DATEHEURE" />
+          </Key>
+          <Property Name="DATEHEURE" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="DEROULER">
+          <Key>
+            <PropertyRef Name="DATEHEURE" />
+            <PropertyRef Name="NUM" />
+          </Key>
+          <Property Name="DATEHEURE" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="NUM" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HOTEL">
+          <Key>
+            <PropertyRef Name="NUM" />
+          </Key>
+          <Property Name="NUM" Type="Int32" Nullable="false" />
+          <Property Name="LIBELLE" Type="String" MaxLength="32" FixedLength="true" Unicode="false" />
+          <Property Name="ADRESSE" Type="String" MaxLength="32" FixedLength="true" Unicode="false" />
+          <Property Name="VILLE" Type="String" MaxLength="32" FixedLength="true" Unicode="false" />
+          <Property Name="CP" Type="Int32" />
+          <Property Name="TEL" Type="Int32" />
+          <Property Name="ETOILES" Type="Int16" />
+          <Property Name="PRIXCHAMBRE" Type="Decimal" Precision="10" Scale="2" />
+        </EntityType>
+        <EntityType Name="INSCRIPTION">
+          <Key>
+            <PropertyRef Name="NUM" />
+            <PropertyRef Name="NUM_1" />
+            <PropertyRef Name="DATEHEURE" />
+          </Key>
+          <Property Name="NUM" Type="Int32" Nullable="false" />
+          <Property Name="NUM_1" Type="Int32" Nullable="false" />
+          <Property Name="DATEHEURE" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="INSCRIRE">
+          <Key>
+            <PropertyRef Name="NUM" />
+            <PropertyRef Name="NUM_1" />
+          </Key>
+          <Property Name="NUM" Type="Int32" Nullable="false" />
+          <Property Name="NUM_1" Type="Int32" Nullable="false" />
+          <Property Name="ACOMPTE" Type="Decimal" Precision="10" Scale="2" />
+        </EntityType>
+        <EntityType Name="INTERVENANT">
+          <Key>
+            <PropertyRef Name="NUM" />
+          </Key>
+          <Property Name="NUM" Type="Int32" Nullable="false" />
+          <Property Name="NOM" Type="String" MaxLength="32" FixedLength="true" Unicode="false" />
+          <Property Name="PRENOM" Type="String" MaxLength="32" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="LIGUE">
+          <Key>
+            <PropertyRef Name="NUM" />
+          </Key>
+          <Property Name="NUM" Type="Int32" Nullable="false" />
+          <Property Name="LIBELLE" Type="String" MaxLength="32" FixedLength="true" Unicode="false" />
+          <Property Name="ADRESSE" Type="String" MaxLength="32" FixedLength="true" Unicode="false" />
+          <Property Name="CP" Type="Int32" />
+          <Property Name="VILLE" Type="String" MaxLength="32" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SESSION">
+          <Key>
+            <PropertyRef Name="NUM" />
+          </Key>
+          <Property Name="NUM" Type="Int32" Nullable="false" />
+          <Property Name="NUM_PORTE" Type="Int32" Nullable="false" />
+          <Property Name="DATEHEURE" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="NUM_INTERVIENT" Type="Int32" Nullable="false" />
+          <Property Name="NOMINTERVENANT" Type="String" MaxLength="32" FixedLength="true" Unicode="false" />
+          <Property Name="NBPLACES" Type="Int32" />
+          <Property Name="SALLE" Type="Int16" />
+          <Property Name="PRIX" Type="Decimal" Precision="10" Scale="2" />
+        </EntityType>
+        <EntityType Name="THEME">
+          <Key>
+            <PropertyRef Name="NUM" />
+          </Key>
+          <Property Name="NUM" Type="Int32" Nullable="false" />
+          <Property Name="LIBELLE" Type="String" MaxLength="32" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="BdCongresEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ACTIVITES" EntityType="Self.ACTIVITE" />
+          <EntitySet Name="CONGRESSISTEs" EntityType="Self.CONGRESSISTE" />
+          <EntitySet Name="DATEs" EntityType="Self.DATE" />
+          <EntitySet Name="DEROULERs" EntityType="Self.DEROULER" />
+          <EntitySet Name="HOTELS" EntityType="Self.HOTEL" />
+          <EntitySet Name="INSCRIPTIONs" EntityType="Self.INSCRIPTION" />
+          <EntitySet Name="INSCRIREs" EntityType="Self.INSCRIRE" />
+          <EntitySet Name="INTERVENANTS" EntityType="Self.INTERVENANT" />
+          <EntitySet Name="LIGUES" EntityType="Self.LIGUE" />
+          <EntitySet Name="SESSIONS" EntityType="Self.SESSION" />
+          <EntitySet Name="THEMES" EntityType="Self.THEME" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BdCongresModelStoreContainer" CdmEntityContainer="BdCongresEntities">
+          <EntitySetMapping Name="ACTIVITES">
+            <EntityTypeMapping TypeName="BdCongresModel.ACTIVITE">
+              <MappingFragment StoreEntitySet="ACTIVITES">
+                <ScalarProperty Name="NUM" ColumnName="NUM" />
+                <ScalarProperty Name="LIBELLE" ColumnName="LIBELLE" />
+                <ScalarProperty Name="NBPLACES" ColumnName="NBPLACES" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CONGRESSISTEs">
+            <EntityTypeMapping TypeName="BdCongresModel.CONGRESSISTE">
+              <MappingFragment StoreEntitySet="CONGRESSISTE">
+                <ScalarProperty Name="NUM" ColumnName="NUM" />
+                <ScalarProperty Name="NUM_APPARTIENT" ColumnName="NUM_APPARTIENT" />
+                <ScalarProperty Name="NUM_HEBERGE" ColumnName="NUM_HEBERGE" />
+                <ScalarProperty Name="NOM" ColumnName="NOM" />
+                <ScalarProperty Name="PRENOM" ColumnName="PRENOM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DATEs">
+            <EntityTypeMapping TypeName="BdCongresModel.DATE">
+              <MappingFragment StoreEntitySet="DATE">
+                <ScalarProperty Name="DATEHEURE" ColumnName="DATEHEURE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DEROULERs">
+            <EntityTypeMapping TypeName="BdCongresModel.DEROULER">
+              <MappingFragment StoreEntitySet="DEROULER">
+                <ScalarProperty Name="DATEHEURE" ColumnName="DATEHEURE" />
+                <ScalarProperty Name="NUM" ColumnName="NUM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HOTELS">
+            <EntityTypeMapping TypeName="BdCongresModel.HOTEL">
+              <MappingFragment StoreEntitySet="HOTELS">
+                <ScalarProperty Name="NUM" ColumnName="NUM" />
+                <ScalarProperty Name="LIBELLE" ColumnName="LIBELLE" />
+                <ScalarProperty Name="ADRESSE" ColumnName="ADRESSE" />
+                <ScalarProperty Name="VILLE" ColumnName="VILLE" />
+                <ScalarProperty Name="CP" ColumnName="CP" />
+                <ScalarProperty Name="TEL" ColumnName="TEL" />
+                <ScalarProperty Name="ETOILES" ColumnName="ETOILES" />
+                <ScalarProperty Name="PRIXCHAMBRE" ColumnName="PRIXCHAMBRE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="INSCRIPTIONs">
+            <EntityTypeMapping TypeName="BdCongresModel.INSCRIPTION">
+              <MappingFragment StoreEntitySet="INSCRIPTION">
+                <ScalarProperty Name="NUM" ColumnName="NUM" />
+                <ScalarProperty Name="NUM_1" ColumnName="NUM_1" />
+                <ScalarProperty Name="DATEHEURE" ColumnName="DATEHEURE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="INSCRIREs">
+            <EntityTypeMapping TypeName="BdCongresModel.INSCRIRE">
+              <MappingFragment StoreEntitySet="INSCRIRE">
+                <ScalarProperty Name="NUM" ColumnName="NUM" />
+                <ScalarProperty Name="NUM_1" ColumnName="NUM_1" />
+                <ScalarProperty Name="ACOMPTE" ColumnName="ACOMPTE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="INTERVENANTS">
+            <EntityTypeMapping TypeName="BdCongresModel.INTERVENANT">
+              <MappingFragment StoreEntitySet="INTERVENANTS">
+                <ScalarProperty Name="NUM" ColumnName="NUM" />
+                <ScalarProperty Name="NOM" ColumnName="NOM" />
+                <ScalarProperty Name="PRENOM" ColumnName="PRENOM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LIGUES">
+            <EntityTypeMapping TypeName="BdCongresModel.LIGUE">
+              <MappingFragment StoreEntitySet="LIGUES">
+                <ScalarProperty Name="NUM" ColumnName="NUM" />
+                <ScalarProperty Name="LIBELLE" ColumnName="LIBELLE" />
+                <ScalarProperty Name="ADRESSE" ColumnName="ADRESSE" />
+                <ScalarProperty Name="CP" ColumnName="CP" />
+                <ScalarProperty Name="VILLE" ColumnName="VILLE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SESSIONS">
+            <EntityTypeMapping TypeName="BdCongresModel.SESSION">
+              <MappingFragment StoreEntitySet="SESSIONS">
+                <ScalarProperty Name="NUM" ColumnName="NUM" />
+                <ScalarProperty Name="NUM_PORTE" ColumnName="NUM_PORTE" />
+                <ScalarProperty Name="DATEHEURE" ColumnName="DATEHEURE" />
+                <ScalarProperty Name="NUM_INTERVIENT" ColumnName="NUM_INTERVIENT" />
+                <ScalarProperty Name="NOMINTERVENANT" ColumnName="NOMINTERVENANT" />
+                <ScalarProperty Name="NBPLACES" ColumnName="NBPLACES" />
+                <ScalarProperty Name="SALLE" ColumnName="SALLE" />
+                <ScalarProperty Name="PRIX" ColumnName="PRIX" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="THEMES">
+            <EntityTypeMapping TypeName="BdCongresModel.THEME">
+              <MappingFragment StoreEntitySet="THEMES">
+                <ScalarProperty Name="NUM" ColumnName="NUM" />
+                <ScalarProperty Name="LIBELLE" ColumnName="LIBELLE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Aucun" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

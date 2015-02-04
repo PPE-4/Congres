@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BdCongresModelStoreContainer" CdmEntityContainer="BdCongresEntities">
+    <EntitySetMapping Name="ACTIVITES">
+      <EntityTypeMapping TypeName="BdCongresModel.ACTIVITE">
+        <MappingFragment StoreEntitySet="ACTIVITES">
+          <ScalarProperty Name="NUM" ColumnName="NUM" />
+          <ScalarProperty Name="LIBELLE" ColumnName="LIBELLE" />
+          <ScalarProperty Name="NBPLACES" ColumnName="NBPLACES" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CONGRESSISTEs">
+      <EntityTypeMapping TypeName="BdCongresModel.CONGRESSISTE">
+        <MappingFragment StoreEntitySet="CONGRESSISTE">
+          <ScalarProperty Name="NUM" ColumnName="NUM" />
+          <ScalarProperty Name="NUM_APPARTIENT" ColumnName="NUM_APPARTIENT" />
+          <ScalarProperty Name="NUM_HEBERGE" ColumnName="NUM_HEBERGE" />
+          <ScalarProperty Name="NOM" ColumnName="NOM" />
+          <ScalarProperty Name="PRENOM" ColumnName="PRENOM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DATEs">
+      <EntityTypeMapping TypeName="BdCongresModel.DATE">
+        <MappingFragment StoreEntitySet="DATE">
+          <ScalarProperty Name="DATEHEURE" ColumnName="DATEHEURE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DEROULERs">
+      <EntityTypeMapping TypeName="BdCongresModel.DEROULER">
+        <MappingFragment StoreEntitySet="DEROULER">
+          <ScalarProperty Name="DATEHEURE" ColumnName="DATEHEURE" />
+          <ScalarProperty Name="NUM" ColumnName="NUM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HOTELS">
+      <EntityTypeMapping TypeName="BdCongresModel.HOTEL">
+        <MappingFragment StoreEntitySet="HOTELS">
+          <ScalarProperty Name="NUM" ColumnName="NUM" />
+          <ScalarProperty Name="LIBELLE" ColumnName="LIBELLE" />
+          <ScalarProperty Name="ADRESSE" ColumnName="ADRESSE" />
+          <ScalarProperty Name="VILLE" ColumnName="VILLE" />
+          <ScalarProperty Name="CP" ColumnName="CP" />
+          <ScalarProperty Name="TEL" ColumnName="TEL" />
+          <ScalarProperty Name="ETOILES" ColumnName="ETOILES" />
+          <ScalarProperty Name="PRIXCHAMBRE" ColumnName="PRIXCHAMBRE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INSCRIPTIONs">
+      <EntityTypeMapping TypeName="BdCongresModel.INSCRIPTION">
+        <MappingFragment StoreEntitySet="INSCRIPTION">
+          <ScalarProperty Name="NUM" ColumnName="NUM" />
+          <ScalarProperty Name="NUM_1" ColumnName="NUM_1" />
+          <ScalarProperty Name="DATEHEURE" ColumnName="DATEHEURE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INSCRIREs">
+      <EntityTypeMapping TypeName="BdCongresModel.INSCRIRE">
+        <MappingFragment StoreEntitySet="INSCRIRE">
+          <ScalarProperty Name="NUM" ColumnName="NUM" />
+          <ScalarProperty Name="NUM_1" ColumnName="NUM_1" />
+          <ScalarProperty Name="ACOMPTE" ColumnName="ACOMPTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INTERVENANTS">
+      <EntityTypeMapping TypeName="BdCongresModel.INTERVENANT">
+        <MappingFragment StoreEntitySet="INTERVENANTS">
+          <ScalarProperty Name="NUM" ColumnName="NUM" />
+          <ScalarProperty Name="NOM" ColumnName="NOM" />
+          <ScalarProperty Name="PRENOM" ColumnName="PRENOM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LIGUES">
+      <EntityTypeMapping TypeName="BdCongresModel.LIGUE">
+        <MappingFragment StoreEntitySet="LIGUES">
+          <ScalarProperty Name="NUM" ColumnName="NUM" />
+          <ScalarProperty Name="LIBELLE" ColumnName="LIBELLE" />
+          <ScalarProperty Name="ADRESSE" ColumnName="ADRESSE" />
+          <ScalarProperty Name="CP" ColumnName="CP" />
+          <ScalarProperty Name="VILLE" ColumnName="VILLE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SESSIONS">
+      <EntityTypeMapping TypeName="BdCongresModel.SESSION">
+        <MappingFragment StoreEntitySet="SESSIONS">
+          <ScalarProperty Name="NUM" ColumnName="NUM" />
+          <ScalarProperty Name="NUM_PORTE" ColumnName="NUM_PORTE" />
+          <ScalarProperty Name="DATEHEURE" ColumnName="DATEHEURE" />
+          <ScalarProperty Name="NUM_INTERVIENT" ColumnName="NUM_INTERVIENT" />
+          <ScalarProperty Name="NOMINTERVENANT" ColumnName="NOMINTERVENANT" />
+          <ScalarProperty Name="NBPLACES" ColumnName="NBPLACES" />
+          <ScalarProperty Name="SALLE" ColumnName="SALLE" />
+          <ScalarProperty Name="PRIX" ColumnName="PRIX" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="THEMES">
+      <EntityTypeMapping TypeName="BdCongresModel.THEME">
+        <MappingFragment StoreEntitySet="THEMES">
+          <ScalarProperty Name="NUM" ColumnName="NUM" />
+          <ScalarProperty Name="LIBELLE" ColumnName="LIBELLE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

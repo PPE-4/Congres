@@ -1,0 +1,14 @@
+c:\users\chloé\documents\visual studio 2013\Projects\Gestion_Grongres\Test_Congres\bin\Debug\Test_Congres.exe.config
+c:\users\chloé\documents\visual studio 2013\Projects\Gestion_Grongres\Test_Congres\obj\Debug\Test_Congres.csprojResolveAssemblyReference.cache
+c:\users\chloé\documents\visual studio 2013\Projects\Gestion_Grongres\Test_Congres\bin\Debug\Test_Congres.exe
+c:\users\chloé\documents\visual studio 2013\Projects\Gestion_Grongres\Test_Congres\bin\Debug\Test_Congres.pdb
+c:\users\chloé\documents\visual studio 2013\Projects\Gestion_Grongres\Test_Congres\bin\Debug\EntityFramework.dll
+c:\users\chloé\documents\visual studio 2013\Projects\Gestion_Grongres\Test_Congres\bin\Debug\Project_congres.dll
+c:\users\chloé\documents\visual studio 2013\Projects\Gestion_Grongres\Test_Congres\bin\Debug\Project_congres.pdb
+c:\users\chloé\documents\visual studio 2013\Projects\Gestion_Grongres\Test_Congres\bin\Debug\EntityFramework.xml
+c:\users\chloé\documents\visual studio 2013\Projects\Gestion_Grongres\Test_Congres\bin\Debug\fr\EntityFramework.resources.dll
+c:\users\chloé\documents\visual studio 2013\Projects\Gestion_Grongres\Test_Congres\obj\Debug\Test_Congres.exe
+c:\users\chloé\documents\visual studio 2013\Projects\Gestion_Grongres\Test_Congres\obj\Debug\Test_Congres.pdb
+D:\Developpement\C#\BTS-2ème\PPE_Congrès\dev\trunk\Gestion_Congres\Test_Congres\bin\Debug\Test_Congres.exe.config
+D:\Developpement\C#\BTS-2ème\PPE_Congrès\dev\trunk\Gestion_Congres\Test_Congres\obj\Debug\Test_Congres.exe
+D:\Developpement\C#\BTS-2ème\PPE_Congrès\dev\trunk\Gestion_Congres\Test_Congres\obj\Debug\Test_Congres.pdb

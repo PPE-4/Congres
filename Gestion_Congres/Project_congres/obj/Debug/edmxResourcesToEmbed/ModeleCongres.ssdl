@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BdCongresModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ACTIVITES">
+    <Key>
+      <PropertyRef Name="NUM" />
+    </Key>
+    <Property Name="NUM" Type="int" Nullable="false" />
+    <Property Name="LIBELLE" Type="char" MaxLength="32" />
+    <Property Name="NBPLACES" Type="int" />
+  </EntityType>
+  <EntityType Name="CONGRESSISTE">
+    <Key>
+      <PropertyRef Name="NUM" />
+    </Key>
+    <Property Name="NUM" Type="int" Nullable="false" />
+    <Property Name="NUM_APPARTIENT" Type="int" Nullable="false" />
+    <Property Name="NUM_HEBERGE" Type="int" Nullable="false" />
+    <Property Name="NOM" Type="char" MaxLength="32" />
+    <Property Name="PRENOM" Type="char" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="DATE">
+    <Key>
+      <PropertyRef Name="DATEHEURE" />
+    </Key>
+    <Property Name="DATEHEURE" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DEROULER">
+    <Key>
+      <PropertyRef Name="DATEHEURE" />
+      <PropertyRef Name="NUM" />
+    </Key>
+    <Property Name="DATEHEURE" Type="datetime" Nullable="false" />
+    <Property Name="NUM" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HOTELS">
+    <Key>
+      <PropertyRef Name="NUM" />
+    </Key>
+    <Property Name="NUM" Type="int" Nullable="false" />
+    <Property Name="LIBELLE" Type="char" MaxLength="32" />
+    <Property Name="ADRESSE" Type="char" MaxLength="32" />
+    <Property Name="VILLE" Type="char" MaxLength="32" />
+    <Property Name="CP" Type="int" />
+    <Property Name="TEL" Type="int" />
+    <Property Name="ETOILES" Type="smallint" />
+    <Property Name="PRIXCHAMBRE" Type="decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="INSCRIPTION">
+    <Key>
+      <PropertyRef Name="NUM" />
+      <PropertyRef Name="NUM_1" />
+      <PropertyRef Name="DATEHEURE" />
+    </Key>
+    <Property Name="NUM" Type="int" Nullable="false" />
+    <Property Name="NUM_1" Type="int" Nullable="false" />
+    <Property Name="DATEHEURE" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="INSCRIRE">
+    <Key>
+      <PropertyRef Name="NUM" />
+      <PropertyRef Name="NUM_1" />
+    </Key>
+    <Property Name="NUM" Type="int" Nullable="false" />
+    <Property Name="NUM_1" Type="int" Nullable="false" />
+    <Property Name="ACOMPTE" Type="decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="INTERVENANTS">
+    <Key>
+      <PropertyRef Name="NUM" />
+    </Key>
+    <Property Name="NUM" Type="int" Nullable="false" />
+    <Property Name="NOM" Type="char" MaxLength="32" />
+    <Property Name="PRENOM" Type="char" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="LIGUES">
+    <Key>
+      <PropertyRef Name="NUM" />
+    </Key>
+    <Property Name="NUM" Type="int" Nullable="false" />
+    <Property Name="LIBELLE" Type="char" MaxLength="32" />
+    <Property Name="ADRESSE" Type="char" MaxLength="32" />
+    <Property Name="CP" Type="int" />
+    <Property Name="VILLE" Type="char" MaxLength="32" />
+  </EntityType>
+  <EntityType Name="SESSIONS">
+    <Key>
+      <PropertyRef Name="NUM" />
+    </Key>
+    <Property Name="NUM" Type="int" Nullable="false" />
+    <Property Name="NUM_PORTE" Type="int" Nullable="false" />
+    <Property Name="DATEHEURE" Type="datetime" Nullable="false" />
+    <Property Name="NUM_INTERVIENT" Type="int" Nullable="false" />
+    <Property Name="NOMINTERVENANT" Type="char" MaxLength="32" />
+    <Property Name="NBPLACES" Type="int" />
+    <Property Name="SALLE" Type="smallint" />
+    <Property Name="PRIX" Type="decimal" Precision="10" Scale="2" />
+  </EntityType>
+  <EntityType Name="THEMES">
+    <Key>
+      <PropertyRef Name="NUM" />
+    </Key>
+    <Property Name="NUM" Type="int" Nullable="false" />
+    <Property Name="LIBELLE" Type="char" MaxLength="32" />
+  </EntityType>
+  <EntityContainer Name="BdCongresModelStoreContainer">
+    <EntitySet Name="ACTIVITES" EntityType="Self.ACTIVITES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CONGRESSISTE" EntityType="Self.CONGRESSISTE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DATE" EntityType="Self.DATE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DEROULER" EntityType="Self.DEROULER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HOTELS" EntityType="Self.HOTELS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="INSCRIPTION" EntityType="Self.INSCRIPTION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="INSCRIRE" EntityType="Self.INSCRIRE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="INTERVENANTS" EntityType="Self.INTERVENANTS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LIGUES" EntityType="Self.LIGUES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SESSIONS" EntityType="Self.SESSIONS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="THEMES" EntityType="Self.THEMES" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
